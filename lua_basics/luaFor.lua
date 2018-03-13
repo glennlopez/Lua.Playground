@@ -3,20 +3,40 @@
     https://www.youtube.com/watch?v=iMacxZQMPXs&t=1320s
 ]]
 
--- normal for loop
-for i = 1, 10 do    -- is implicitly incremented by 1
+-- normal for loop; is implicitly incremented by 1
+for i = 1, 10 do
     io.write(i," ")
 end
 io.write("\n")
 
--- ???
-for i = 1, 10, 1 do -- is explicitly incremented by 1
+-- normal for loop; is explicitly incremented by 1
+for i = 1, 10, 1 do 
     io.write(i)
 end
 io.write("\n")
 
--- for key, value in pairs
+-- for (key, value in pairs)
 Table = {}
-Table[1] = "This is a test"
-Table[2] = "Hello there"
-Table[3] = "One 2 ..."
+Table[1] = "First in the list"
+Table[2] = "This is the second"
+Table[3] = "and the third"
+Table[4] = "This is the forth"
+Table[5] = "Five on the list"
+Table[6] = "Six"
+
+-- "key" is [n]; "value" is element in the table
+for key, value in pairs(Table) do
+    print(key, value)
+
+    --[[
+    if (key < 5) and (key > 2) then
+        print(value)
+    end
+    ]]
+
+    --[[
+    if key == 2 then
+        print(value)
+    end
+    ]]
+end
