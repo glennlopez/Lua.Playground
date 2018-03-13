@@ -24,6 +24,10 @@ Table[4] = "This is the forth"
 Table[5] = "Five on the list"
 Table[6] = "Six"
 
+Table2 = {
+    "First on list", "Second on list", "Third on list"
+}
+
 -- "key" is [n]; "value" is element in the table
 for key, value in pairs(Table) do
     print(key, value)
@@ -39,4 +43,12 @@ for key, value in pairs(Table) do
         print(value)
     end
     ]]
+end
+
+-- "key" is [n]; "value" is element in the table
+for key, value in pairs(Table2) do
+    --print(k, v)
+    if key ~= 2 then
+        print(value)
+    end
 end
