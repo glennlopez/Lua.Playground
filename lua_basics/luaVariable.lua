@@ -34,4 +34,10 @@ print(longString)
 testBool = true
 io.write("Datatype: ", type(testBool) ,"\n")
 
-
+-- creating local variables
+localvar = 100
+for i = 1, 3, 1 do
+    local localvar = 3 -- remove "local" to see what happens
+    io.write("localvar = ", localvar, "\n")
+end
+io.write("localvar = ", localvar, "\n")

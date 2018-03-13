@@ -46,7 +46,9 @@ aTable[#aTable] = "modified value"
 table.insert(aTable, #aTable + 1, "inserted value")
 
 -- removing a key value to table
-table.remove( list, [pos,] )
+table.remove(bTable, 1)
+table.remove(bTable, math.floor(#bTable / 2)) -- #bTable/2 gives float if 10/2
+table.remove(bTable, #bTable)
 
 -- print aTable
 for key, value in pairs(aTable) do
@@ -59,4 +61,4 @@ print("aTable[2]: ", aTable[2])
 print("\n") -- newline
 
 -- print bTable with seperator
-print(table.concat(bTable, ", ")) -- notice: no loop needed
+print("bTable{}: ",table.concat(bTable, ", ")) -- notice: no loop needed
